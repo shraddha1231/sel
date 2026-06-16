@@ -10,16 +10,17 @@ agent any
    }
    }
  
-   stage('Build'){
+ stage('Build'){
   steps{
    sh 'mvn clean package'
    }
    }
-   stage('Test'){
+ stage('Test'){
   steps{
    sh 'mvn test'
    }
-   }stage('Run Application'){
+   }
+  stage('Run Application'){
   steps{
    sh 'mvn exxec:java -Dexec.mainClass=com.example.App'
    }
