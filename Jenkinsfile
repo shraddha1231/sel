@@ -9,11 +9,7 @@ agent any
    git branch : 'master',url:'https://github.com/shraddha1231/sel.git'
    }
    }
-   stage('Checkout'){
-  steps{
-   git branch : 'master',url:''
-   }
-   }
+ 
    stage('Build'){
   steps{
    sh 'mvn clean package'
